@@ -6,8 +6,10 @@
 
 class Printable {
 public:
+	virtual ~Printable() {}
 	virtual void Print() const = 0;
 };
+
 class Named: virtual public Printable {
 public:
 	explicit Named( std::string iName ) {
